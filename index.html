@@ -46,6 +46,7 @@
   <div id="oculto1" style="display: none;">
     <h1>El código es correcto!</h1>
     <p>La próxima pista está en: Lugar2</p>
+    <p id="lugar"></p>
   </div>
   <div id="oculto2" style="display: none;">
     <h1>El código no es correcto!</h1>
@@ -54,7 +55,9 @@
 
 </div>
 
-
+<script>
+  document.getElementById('lugar').innerHTML = "En la alacena de los platos."
+</script>
 <script>
   function CheckPassword(inputtxt) {
 
