@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pascuas</title>
 
+  <!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Web aplication Easter event">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pascuas</title>
+
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Pascuas">
@@ -19,30 +28,49 @@
   <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
+<html>
 <body>
-
 <div style="text-align:center">
 
-  <h1 class="mdc-typography--headline1">Pista </h1>
+  <h1 class="mdc-typography--headline1">Pista 1</h1>
   <h2 class="mdc-typography--overline">Introducir código:</h2>
-
-  <form class="mdc-form-field" action="#">
-    <input type="text" id="my-text-field" class="mdc-text-field__input">
+  <form name="form1" class="mdc-form-field">
+    <input type="text" id="my-text-field" class="mdc-text-field__input" name='pista1'>
     <div class="mdc-line-ripple"></div>
   </form>
-
   <div style="padding:20px">
-    <button class="mdc-button mdc-button--outlined" style="border-color:#f44242" type="submit">
+    <button class="mdc-button mdc-button--outlined" style="border-color:#f44242" type="submit" onclick="CheckPassword(document.form1.pista1)">
       <span class="mdc-button__label">Aceptar</span>
     </button>
   </div>
-  
+  <div id="oculto1" style="display: none;">
+    <h1>El código es correcto!</h1>
+    <p>La próxima pista está en: Lugar2</p>
+  </div>
+  <div id="oculto2" style="display: none;">
+    <h1>El código no es correcto!</h1>
+    <p>Probá de nuevo =)</p>
+  </div>
+
 </div>
 
 
+<script>
+  function CheckPassword(inputtxt) {
 
-  <script src="main.js"></script>
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  if(inputtxt.value == 12345) { 
+    document.getElementById('oculto1').style.display = 'block';
+  } else {
+    document.getElementById('oculto2').style.display = 'block';
+  }
+}
+</script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
