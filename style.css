@@ -1,7 +1,18 @@
 body, h1, h2, span {
   font-family: "Special Elite" !important; 
   color: #f44242;
+  text-align: center;
 }
+
 h2 {
   font-size: 24px !important;
+}
+
+.oculto {
+  display: none;
+}
+
+.boton {
+  margin: 20px;
+  border-color: #f44242 !important;
 }

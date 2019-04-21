@@ -3,71 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Web aplication Easter event">
+  <meta name="description" content="Web aplication for Easter event">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pascuas</title>
-
-  <!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Web aplication Easter event">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pascuas</title>
+  <title>Felices Pascuas</title>
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Pascuas">
+  <meta name="application-name" content="Easter event">
   <meta name="theme-color" content="#f44242">
 
   <!--Material design and styles-->
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-<!--  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">-->
-  <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Special+Elite">
   <link rel="stylesheet" href="style.css">
 </head>
-<html>
-<body>
-<div style="text-align:center">
 
-  <h1 class="mdc-typography--headline1">Pista 1</h1>
+<body>
+
+<div id="saludo"> <!--init saludo-->
+  <h1 class="mdc-typography--headline1">Bienvenidas</h1>
+  <h2 class="mdc-typography--overline">Veo que lograron llegar</h2>
+  
+  <button class="mdc-button mdc-button--outlined boton" onclick="reset()">
+    <span class="mdc-button__label">Ingresar</span>
+  </button>
+</div> <!--end saludo-->
+
+<div id="app" class="oculto"> <!--init app-->
+  <h1 id="nPista" class="mdc-typography--headline1"></h1>
   <h2 class="mdc-typography--overline">Introducir código:</h2>
-  <form name="form1" class="mdc-form-field">
-    <input type="text" id="my-text-field" class="mdc-text-field__input" name='pista1'>
+  
+  <form name="form" class="mdc-form-field">
+    <input type="text" id="my-text-field" class="mdc-text-field__input" name='pista'>
     <div class="mdc-line-ripple"></div>
   </form>
-  <div style="padding:20px">
-    <button class="mdc-button mdc-button--outlined" style="border-color:#f44242" type="submit" onclick="CheckPassword(document.form1.pista1)">
-      <span class="mdc-button__label">Aceptar</span>
+  
+  <button type="submit" class="mdc-button mdc-button--outlined boton" onclick="CheckPassword(document.form.pista)">
+    <span class="mdc-button__label">Aceptar</span>
+  </button>
+  
+  <div id="nextCode" class="oculto">
+    <h1>El código es correcto!</h1>
+    <p>La próxima pista es:</p>
+    <p id="place"></p>
+    
+    <button type="submit" id="next" class="mdc-button mdc-button--outlined boton" onclick="reset()">
+      <span class="mdc-button__label">Siguiente</span>
     </button>
   </div>
-  <div id="oculto1" style="display: none;">
-    <h1>El código es correcto!</h1>
-    <p>La próxima pista está en: Lugar2</p>
-    <p id="lugar"></p>
-  </div>
-  <div id="oculto2" style="display: none;">
+  
+  <div id="tryAgain" class="oculto">
     <h1>El código no es correcto!</h1>
     <p>Probá de nuevo =)</p>
   </div>
+</div> <!--end app-->
 
-</div>
-
-<script>
-  document.getElementById('lugar').innerHTML = "En la alacena de los platos."
-</script>
-<script>
-  function CheckPassword(inputtxt) {
-
-  if(inputtxt.value == 12345) { 
-    document.getElementById('oculto1').style.display = 'block';
-  } else {
-    document.getElementById('oculto2').style.display = 'block';
-  }
-}
-</script>
+<script src="main.js"></script>
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 </body>
 </html>
