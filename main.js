@@ -20,6 +20,7 @@ function reset() {
   document.getElementById('app').style.display = 'block';
   document.getElementById('nPista').innerHTML = "Pista " + (i + 1);
   document.getElementById('place').innerHTML = pistas[i].newPlace;
+  document.getElementById('nextCode').style.display = 'none';
   document.form.pista.value = '';
   if(i == (pistas.length - 1)) {
     document.getElementById('next').style.display = 'none';
@@ -29,8 +30,10 @@ function reset() {
 function CheckPassword(inputtxt) {
   if(inputtxt.value == pistas[i].goodCode) { 
     document.getElementById('nextCode').style.display = 'block';
+    document.getElementById('tryAgain').style.display = 'none';
   } else {
     document.getElementById('tryAgain').style.display = 'block';
+    document.getElementById('nextCode').style.display = 'none';
   }
 }
 
