@@ -6,4 +6,4 @@ Cada pista es un puzzle de logica que revela un codigo de cinco digitos. Se ingr
 
 ### Utilidades
 
-Se utilizo la libreria(CDN) Material Design Web para los estilos y Google Fonts para la tipografia.
+Se utilizo la libreria (CDN) Material Design Web para los estilos y Google Fonts para la tipografia.
