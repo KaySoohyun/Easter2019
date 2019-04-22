@@ -17,15 +17,15 @@ var i = -1;
 
 // Refresca la pantalla de juego
 function reset() {
-  i = i + 1; Avanzo en las pistas
-  document.getElementById('saludo').style.display = 'none'; /*Oculto la pantalla inicial*/
-  document.getElementById('app').style.display = 'block'; /*Muestro la pantalla de juego*/
-  document.getElementById('nPista').innerHTML = "Pista " + (i + 1); /*Titulo que muestra el numero de la pista actualizado*/
-  document.getElementById('place').innerHTML = pistas[i].newPlace; /*Muestra el lugar donde se encuentra la nueva pista*/
-  document.getElementById('nextCode').style.display = 'none'; /*Oculta la pista anterior*/
-  document.form.pista.value = ''; /*Borra el campo escrito*/
+  i = i + 1; /* Avanzo en las pistas */
+  document.getElementById('saludo').style.display = 'none'; /* Oculto la pantalla inicial */
+  document.getElementById('app').style.display = 'block'; /* Muestro la pantalla de juego */
+  document.getElementById('nPista').innerHTML = "Pista " + (i + 1); /* Titulo que muestra el numero de la pista actualizado */
+  document.getElementById('place').innerHTML = pistas[i].newPlace; /* Muestra el lugar donde se encuentra la nueva pista */
+  document.getElementById('nextCode').style.display = 'none'; /* Oculta la pista anterior */
+  document.form.pista.value = ''; /* Borra el campo escrito*/
   if(i == (pistas.length - 1)) {
-    document.getElementById('next').style.display = 'none'; /*Si es la ultima pista, no muestra el boton siguiente*/
+    document.getElementById('next').style.display = 'none'; /* Si es la ultima pista, no muestra el boton siguiente */
   }
 }
 
@@ -39,4 +39,3 @@ function CheckPassword(inputtxt) {
     document.getElementById('nextCode').style.display = 'none';
   }
 }
-
